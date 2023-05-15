@@ -42,6 +42,18 @@ app.use((req, res, next) => {
     next();
   });
 
+app.get('/er/about/', (req, res) => {
+  res.render('about', { title: 'about' });
+});
+
+app.get('/er/projects/', (req, res) => {
+  res.render('projects', { title: 'projects' });
+});
+
+app.get('/er/blog/', (req, res) => {
+  res.render('blog', { title: 'blog' });
+});
+
 // homepage
 app.get('/er/', (req, res) => {
     res.render('home', { title: 'whirlwindaster' });

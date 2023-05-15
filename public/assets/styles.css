@@ -2,6 +2,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {height: 100%;}
+
 body {
     background-color: #ebd4eb;
     margin: 0;
@@ -36,9 +38,14 @@ a.footertext:visited {text-decoration: none; color:#ebd4eb;}
 a.footertext:hover {text-decoration: none; color:#ffda03;}
 a.footertext:active {text-decoration: none; color:#ffda03;}
 
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
 h2 {
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .topcontainer {
@@ -81,3 +88,4 @@ img {
 #left {
     float: left;
 }
+
