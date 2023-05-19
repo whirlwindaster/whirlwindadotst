@@ -8,7 +8,7 @@ import { dirname, sep } from 'path';
 const
   __dirname = dirname(fileURLToPath( import.meta.url )) + sep,
   cfg = {
-    port: 8080,
+    port: 8081,
     dir: {
       root:   __dirname,
       public: __dirname + 'public' + sep,
@@ -42,16 +42,13 @@ app.use((req, res, next) => {
     next();
   });
 
-app.get('/er/about/', (req, res) => {
-  res.render('about', { title: 'about' });
+// routes
+app.get('/er/blog/:post/', (req, res) => {
+  res.render(`posts/${ req.params.post }`, { title: req.params.post });
 });
 
-app.get('/er/projects/', (req, res) => {
-  res.render('projects', { title: 'projects' });
-});
-
-app.get('/er/blog/', (req, res) => {
-  res.render('blog', { title: 'blog' });
+app.get('/er/:subpage/', (req, res) => {
+  res.render(req.params.subpage, { title: req.params.subpage });
 });
 
 // homepage

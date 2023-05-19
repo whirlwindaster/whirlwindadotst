@@ -38,14 +38,35 @@ a.footertext:visited {text-decoration: none; color:#ebd4eb;}
 a.footertext:hover {text-decoration: none; color:#ffda03;}
 a.footertext:active {text-decoration: none; color:#ffda03;}
 
+a.posttitle:link { color:#8c33f1; }
+a.posttitle:visited { color:#8c33f1; }
+a.posttitle:hover { color:#299ea7; }
+a.posttitle:active { color:#299ea7; }
+
 h1 {
     text-align: center;
     font-size: 50px;
+    margin: 15px;
 }
 
 h2 {
     text-align: center;
     font-size: 70px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: normal;
 }
 
 .topcontainer {
@@ -89,3 +110,33 @@ img {
     float: left;
 }
 
+.postscontainer {
+    display: grid;
+    grid-template-columns: [blank1-start] 16fr [blank1-end title-start] 4fr [title-end sep-start] 1fr [sep-end sate-start] 4fr [date-end blank2-start] 16fr;
+    grid-template-rows: repeat(1, 30px);
+}
+
+.posttitle {
+    text-align: right;
+    align-self: center;
+}
+
+.postdate {
+    text-align: left;
+    align-self: center;
+}
+
+.postsep {
+    text-align: center;
+    align-self: center;
+}
+
+.postbody {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.postparagraph {
+    text-indent: 1%;
+    line-height: 2;
+}
